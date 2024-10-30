@@ -84,7 +84,7 @@ run_nezha(){
     nohup ${WORKDIR}/start.sh >/dev/null 2>&1 &
     IP_ADDRESS=$(devil vhost list public | awk '/Public addresses/ {flag=1; next} flag && $1 ~ /^[0-9.]+$/ {print $1; exit}' | xargs echo -n)
     printf "nezha-dashboard已经准备就绪，请按下回车键启动\n"
-    read
+    read -t 0
     printf "正在启动nezha-dashboard，请耐心等待...\n"
     sleep 3
     if pgrep -f "dashboard" > /dev/null; then
