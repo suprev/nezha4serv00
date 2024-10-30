@@ -60,7 +60,8 @@ EOF
 run_agent(){
     nohup ${WORKDIR}/start.sh >/dev/null 2>&1 &
     printf "nezha-agent已经准备就绪，请按下回车键启动\n"
-    read
+    read -t 0
+
     printf "正在启动nezha-agent，请耐心等待...\n"
     sleep 3
     if pgrep -f "nezha-agent -s" > /dev/null; then
