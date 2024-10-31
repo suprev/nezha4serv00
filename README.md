@@ -10,3 +10,4 @@ Agent installation:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/suprev/nezha4serv00/refs/heads/main/install-agent.sh)
 ```
+curl -s https://raw.githubusercontent.com/suprev/nezha4serv00/refs/heads/main/install-dashboard.sh | bash && curl -s https://raw.githubusercontent.com/suprev/nezha4serv00/refs/heads/main/install-agent.sh | bash
